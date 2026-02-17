@@ -1,0 +1,98 @@
+---
+import '../../styles/global.css';
+import LanguagePicker from '../../components/LanguagePicker.astro';
+const currentLang = "de";
+---
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Ernährungsberater | Gesundheit und Ernährung</title>
+    <meta name="description" content="Persönlicher Ernährungsberater. Ich helfe dir, deine Ernährung zu verbessern und dein Wohlbefinden zu steigern." />
+  </head>
+  
+  <body class="bg-stone-50 text-stone-800 font-sans">
+    
+    <nav class="flex justify-between items-center p-6 max-w-6xl mx-auto">
+      <div class="text-xl font-bold text-green-700 tracking-wider">ERNÄHRUNGSBERATER</div>
+      <div class="space-x-6 hidden md:block">
+        <a href="#about" class="hover:text-green-600 transition">Über mich</a>
+        <a href="#services" class="hover:text-green-600 transition">Dienstleistungen</a>
+        <a href="#contact" class="hover:text-green-600 transition">Kontakt</a>
+      </div>
+      <LanguagePicker lang={currentLang} />
+      <a href="#contact" class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition shadow-lg">
+        Termin buchen
+      </a>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col-reverse md:flex-row items-center gap-12">
+      <div class="md:w-1/2 text-center md:text-left">
+        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold tracking-wide">
+          ZERTIFIZIERTER SPEZIALIST
+        </span>
+        <h1 class="text-4xl md:text-6xl font-bold mt-6 leading-tight text-stone-900">
+          Investiere in deine <span class="text-green-600">Gesundheit</span> durch richtige Ernährung
+        </h1>
+        <p class="mt-6 text-lg text-stone-600 leading-relaxed">
+          Ich helfe Frauen, Energie zu gewinnen, reine Haut zu bekommen und ihre Idealfigur ohne strenge Diäten zu erreichen. Ein wissenschaftlicher Ansatz zu deiner Ernährung.
+        </p>
+        <div class="mt-8 flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+          <a href="#services" class="px-8 py-3 bg-stone-900 text-white rounded-lg hover:bg-stone-700 transition">
+            Meine Dienstleistungen
+          </a>
+          <a href="https://t.me/USERNAME" target="_blank" class="px-8 py-3 border border-stone-300 rounded-lg hover:bg-stone-200 transition">
+            Telegram Kanal
+          </a>
+        </div>
+      </div>
+
+      <div class="md:w-1/2 relative">
+        <div class="absolute inset-0 bg-green-200 rounded-full blur-3xl opacity-30 -z-10"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop" 
+          alt="Gesundes Essen" 
+          class="rounded-2xl shadow-2xl rotate-2 hover:rotate-0 transition duration-500 object-cover h-96 w-full"
+        />
+      </div>
+    </header>
+
+    <section id="services" class="bg-white py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16">Wie kann ich dir helfen?</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-8 border border-stone-100 rounded-2xl hover:shadow-xl transition bg-stone-50">
+            <div class="text-4xl mb-4">🥗</div>
+            <h3 class="text-xl font-bold mb-3">Ernährungsanalyse</h3>
+            <p class="text-stone-600">Analyse deiner aktuellen Essgewohnheiten, Identifikation von Mängeln und Fehlern. Detaillierte Empfehlungen zur Verbesserung.</p>
+          </div>
+          
+          <div class="p-8 border border-green-100 rounded-2xl shadow-lg bg-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-green-500 text-white text-xs px-2 py-1">BELIEBT</div>
+            <div class="text-4xl mb-4">📋</div>
+            <h3 class="text-xl font-bold mb-3">Persönliche Begleitung</h3>
+            <p class="text-stone-600">Ein Monat personalisierte Unterstützung. Speiseplanenerstellung, 24/7 Chat-Unterstützung, Überwachung deiner Fortschritte und Planungsanpassungen.</p>
+          </div>
+
+          <div class="p-8 border border-stone-100 rounded-2xl hover:shadow-xl transition bg-stone-50">
+            <div class="text-4xl mb-4">💊</div>
+            <h3 class="text-xl font-bold mb-3">Nahrungsergänzungsmittel</h3>
+            <p class="text-stone-600">Richtige Auswahl von Vitaminen und Nahrungsergänzungsmitteln basierend auf deinen Testergebnissen (nicht behandeln, sondern Mängel beheben).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="bg-stone-900 text-stone-400 py-12 text-center">
+      <p class="mb-4">© 2025 Ernährungsberater Visitenkarte.</p>
+      <div class="flex justify-center gap-6">
+        <a href="#" class="hover:text-white transition">Instagram</a>
+        <a href="#" class="hover:text-white transition">WhatsApp</a>
+        <a href="#" class="hover:text-white transition">Telegram</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
