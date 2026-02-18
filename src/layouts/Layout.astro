@@ -1,0 +1,26 @@
+---
+// src/layouts/Layout.astro
+interface Props {
+  title: string;
+  lang: string;
+}
+
+const { title, lang } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    </head>
+  <body class="bg-gray-50 text-slate-900 font-sans">
+    <slot /> <footer class="mt-20 p-10 border-t text-sm text-gray-500">
+       <div class="max-w-4xl mx-auto flex gap-4">
+         <a href={`/${lang}/impressum`}>Impressum</a>
+         <a href={`/${lang}/datenschutz`}>Datenschutz</a>
+       </div>
+    </footer>
+  </body>
+</html>

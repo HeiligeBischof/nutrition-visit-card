@@ -1,0 +1,71 @@
+---
+// src/pages/en/impressum.astro
+import Layout from '../../layouts/Layout.astro';
+
+// Флаг для Kleinunternehmer (малый бизнес)
+const isVATExempt = true; 
+---
+
+<Layout title="Legal Notice | Impressum" lang="en">
+  <main class="bg-stone-50 py-20 px-6">
+    <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 shadow-sm border border-stone-100 rounded-2xl">
+      <h1 class="text-3xl font-bold text-stone-900 mb-2 text-center uppercase tracking-tight">Legal Notice</h1>
+      <p class="text-center text-stone-400 text-xs mb-8 uppercase tracking-widest">(Impressum)</p>
+
+      <div class="prose prose-stone prose-sm max-w-none text-stone-700 leading-relaxed space-y-6">
+        
+        <div class="bg-amber-50 border-l-4 border-amber-200 p-4 mb-8 text-amber-800 text-xs italic">
+          Disclaimer: This is a translation of the legally binding German "Impressum". In case of any discrepancies, the German version shall prevail.
+        </div>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-2 border-b pb-2">Information according to § 5 E-Commerce Act</h2>
+          <p class="font-bold text-lg">[Firstname Lastname]</p>
+          <p>[Street, House Number]</p>
+          <p>[Zip Code] Klagenfurt am Wörthersee | Austria</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-2 border-b pb-2">Business Object</h2>
+          <p>Holistic Nutritional Counseling</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-2 border-b pb-2">Contact Details</h2>
+          <p><strong>Phone:</strong> [Phone Number]</p>
+          <p><strong>Email:</strong> [Email Address]</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-2 border-b pb-2">Memberships</h2>
+          <p>Member of the Austrian Economic Chamber (WKO Kärnten)</p>
+          <p>Professional Group: Personal Consulting and Care</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-2 border-b pb-2">Supervisory/Trade Authority</h2>
+          <p>Magistrate of the City of Klagenfurt am Wörthersee</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-2 border-b pb-2">VAT Information</h2>
+          {isVATExempt ? (
+            <p>VAT exempt due to the small business regulation according to § 6 para. 1 no. 27 UStG.</p>
+          ) : (
+            <p><strong>VAT-ID:</strong> [Your ATU Number]</p>
+          )}
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-2 border-b pb-2">Applicable Legislation</h2>
+          <p>Trade Regulation (Gewerbeordnung): <a href="https://www.ris.bka.gv.at" target="_blank" class="text-green-600 hover:underline">www.ris.bka.gv.at</a></p>
+        </section>
+
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-stone-100 text-center">
+        <a href="/en" class="text-green-600 font-bold hover:text-green-700 transition">← Back to Homepage</a>
+      </div>
+    </div>
+  </main>
+</Layout>

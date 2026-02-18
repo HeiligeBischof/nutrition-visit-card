@@ -1,6 +1,8 @@
 ---
 import '../../styles/global.css';
 import LanguagePicker from '../../components/LanguagePicker.astro'; // <-- Добавь эту строку
+import { Icon } from 'astro-icon/components';
+
 const currentLang = "ru"; // <-- Укажи язык этого файла ("ru", "en" или "de")
 // --- Server Side Zone (Backend logic goes here) ---
 // Тут мы пишем JavaScript, который выполняется на сервере.
@@ -60,39 +62,70 @@ const currentLang = "ru"; // <-- Укажи язык этого файла ("ru"
       </div>
     </header>
 
-    <section id="services" class="bg-white py-20">
+<section id="services" class="bg-white py-20">
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-16">Чем я могу помочь?</h2>
+        <h2 class="text-3xl font-bold text-center mb-16 text-stone-900">Чем я могу помочь?</h2>
         
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="p-8 border border-stone-100 rounded-2xl hover:shadow-xl transition bg-stone-50">
-            <div class="text-4xl mb-4">🥗</div>
-            <h3 class="text-xl font-bold mb-3">Разбор рациона</h3>
-            <p class="text-stone-600">Анализ текущего питания, поиск дефицитов и ошибок. Подробные рекомендации по исправлению.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="p-8 border border-stone-100 rounded-2xl hover:shadow-xl transition bg-stone-50 group">
+            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              🥗
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-stone-900">Разбор рациона</h3>
+            <p class="text-stone-600 leading-relaxed hyphens-auto">
+              Анализ текущего питания, поиск дефицитов и ошибок. Подробные рекомендации по исправлению.
+            </p>
           </div>
           
-          <div class="p-8 border border-green-100 rounded-2xl shadow-lg bg-white relative overflow-hidden">
-            <div class="absolute top-0 right-0 bg-green-500 text-white text-xs px-2 py-1">POPULAR</div>
-            <div class="text-4xl mb-4">📋</div>
-            <h3 class="text-xl font-bold mb-3">Сопровождение</h3>
-            <p class="text-stone-600">Месяц работы. Составление меню, чат-поддержка 24/7, контроль анализов и корректировка плана.</p>
+          <div class="p-8 border border-green-200 rounded-2xl shadow-lg bg-white relative overflow-hidden group">
+            <div class="absolute top-0 right-0 bg-green-500 text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider">
+              Popular
+            </div>
+            
+            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              📋
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-stone-900">Сопровождение</h3>
+            <p class="text-stone-600 leading-relaxed hyphens-auto">
+              Месяц работы. Составление меню, чат-поддержка 24/7, контроль анализов и корректировка плана.
+            </p>
           </div>
 
-          <div class="p-8 border border-stone-100 rounded-2xl hover:shadow-xl transition bg-stone-50">
-            <div class="text-4xl mb-4">💊</div>
-            <h3 class="text-xl font-bold mb-3">Подбор нутрицевтиков</h3>
-            <p class="text-stone-600">Грамотный подбор витаминов и БАДов на основе ваших анализов (не лечу, а восполняю дефициты).</p>
+          <div class="p-8 border border-stone-100 rounded-2xl hover:shadow-xl transition bg-stone-50 group">
+            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              💊
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-stone-900">Подбор нутрицевтиков</h3>
+            <p class="text-stone-600 leading-relaxed hyphens-auto">
+              Грамотный подбор витаминов и БАДов на основе ваших анализов (не лечу, а восполняю дефициты).
+            </p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <footer id="contact" class="bg-stone-900 text-stone-400 py-12 text-center">
-      <p class="mb-4">© 2025 Nutritionist Visit Card.</p>
-      <div class="flex justify-center gap-6">
-        <a href="#" class="hover:text-white transition">Instagram</a>
-        <a href="#" class="hover:text-white transition">WhatsApp</a>
-        <a href="#" class="hover:text-white transition">Telegram</a>
+   <footer id="contact" class="bg-stone-900 text-stone-400 py-12 text-center">
+      <p class="mb-8">&copy; {new Date().getFullYear()} Венера Гагарина. Все права защищены.</p>
+      
+      <div class="flex justify-center gap-8 mb-8">
+        <a href="https://instagram.com/..." target="_blank" aria-label="Instagram" class="hover:text-pink-500 transition-colors duration-300">
+          <Icon name="mdi:instagram" class="w-8 h-8" />
+        </a>
+
+        <a href="https://wa.me/43..." target="_blank" aria-label="WhatsApp" class="hover:text-green-500 transition-colors duration-300">
+          <Icon name="mdi:whatsapp" class="w-8 h-8" />
+        </a>
+
+        <a href="https://t.me/..." target="_blank" aria-label="Telegram" class="hover:text-blue-400 transition-colors duration-300">
+          <Icon name="mdi:telegram" class="w-8 h-8" />
+        </a>
+      </div>
+
+      <div class="flex justify-center gap-6 text-xs uppercase tracking-widest mt-4 border-t border-stone-800 pt-8">
+        <a href="/ru/impressum" class="hover:text-white transition">Legal Notice</a>
+        <a href="/ru/datenschutz" class="hover:text-white transition">Privacy Policy</a>
       </div>
     </footer>
 

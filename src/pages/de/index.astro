@@ -1,6 +1,8 @@
 ---
 import '../../styles/global.css';
 import LanguagePicker from '../../components/LanguagePicker.astro';
+import { Icon } from 'astro-icon/components';
+
 const currentLang = "de";
 ---
 
@@ -58,39 +60,70 @@ const currentLang = "de";
       </div>
     </header>
 
-    <section id="services" class="bg-white py-20">
+<section id="services" class="bg-white py-20">
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-16">Wie kann ich dir helfen?</h2>
+        <h2 class="text-3xl font-bold text-center mb-16 text-stone-900">Mein Angebot</h2>
         
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="p-8 border border-stone-100 rounded-2xl hover:shadow-xl transition bg-stone-50">
-            <div class="text-4xl mb-4">🥗</div>
-            <h3 class="text-xl font-bold mb-3">Ernährungsanalyse</h3>
-            <p class="text-stone-600">Analyse deiner aktuellen Essgewohnheiten, Identifikation von Mängeln und Fehlern. Detaillierte Empfehlungen zur Verbesserung.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="p-8 border border-stone-100 rounded-2xl hover:shadow-xl transition bg-stone-50 group">
+            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              🥗
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-stone-900">Ernährungsanalyse</h3>
+            <p class="text-stone-600 leading-relaxed hyphens-auto">
+              Analyse der aktuellen Ernährung, Aufdecken von Defiziten und Fehlern. Detaillierte Empfehlungen zur Korrektur.
+            </p>
           </div>
           
-          <div class="p-8 border border-green-100 rounded-2xl shadow-lg bg-white relative overflow-hidden">
-            <div class="absolute top-0 right-0 bg-green-500 text-white text-xs px-2 py-1">BELIEBT</div>
-            <div class="text-4xl mb-4">📋</div>
-            <h3 class="text-xl font-bold mb-3">Persönliche Begleitung</h3>
-            <p class="text-stone-600">Ein Monat personalisierte Unterstützung. Speiseplanenerstellung, 24/7 Chat-Unterstützung, Überwachung deiner Fortschritte und Planungsanpassungen.</p>
+          <div class="p-8 border border-green-200 rounded-2xl shadow-lg bg-white relative overflow-hidden group">
+            <div class="absolute top-0 right-0 bg-green-500 text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider">
+              Beliebt
+            </div>
+            
+            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              📋
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-stone-900">Monatsbegleitung</h3>
+            <p class="text-stone-600 leading-relaxed hyphens-auto">
+              Ein Monat Zusammenarbeit. Menüplanung, 24/7 Chat-Support, Kontrolle der Blutwerte und Anpassung des Plans.
+            </p>
           </div>
 
-          <div class="p-8 border border-stone-100 rounded-2xl hover:shadow-xl transition bg-stone-50">
-            <div class="text-4xl mb-4">💊</div>
-            <h3 class="text-xl font-bold mb-3">Nahrungsergänzungsmittel</h3>
-            <p class="text-stone-600">Richtige Auswahl von Vitaminen und Nahrungsergänzungsmitteln basierend auf deinen Testergebnissen (nicht behandeln, sondern Mängel beheben).</p>
+          <div class="p-8 border border-stone-100 rounded-2xl hover:shadow-xl transition bg-stone-50 group">
+            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              💊
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-stone-900">Mikronährstoffe</h3>
+            <p class="text-stone-600 leading-relaxed hyphens-auto">
+              Professionelle Auswahl von Vitaminen und Nahrungsergänzungsmitteln basierend auf Ihren Analysen (Ausgleich von Defiziten).
+            </p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <footer id="contact" class="bg-stone-900 text-stone-400 py-12 text-center">
-      <p class="mb-4">© 2025 Ernährungsberater Visitenkarte.</p>
-      <div class="flex justify-center gap-6">
-        <a href="#" class="hover:text-white transition">Instagram</a>
-        <a href="#" class="hover:text-white transition">WhatsApp</a>
-        <a href="#" class="hover:text-white transition">Telegram</a>
+<footer id="contact" class="bg-stone-900 text-stone-400 py-12 text-center">
+      <p class="mb-8">&copy; {new Date().getFullYear()} Venera Gagarina. Alle Rechte vorbehalten.</p>
+      
+      <div class="flex justify-center gap-8 mb-8">
+        <a href="https://instagram.com/..." target="_blank" aria-label="Instagram" class="hover:text-pink-500 transition-colors duration-300">
+          <Icon name="mdi:instagram" class="w-8 h-8" />
+        </a>
+
+        <a href="https://wa.me/43..." target="_blank" aria-label="WhatsApp" class="hover:text-green-500 transition-colors duration-300">
+          <Icon name="mdi:whatsapp" class="w-8 h-8" />
+        </a>
+
+        <a href="https://t.me/..." target="_blank" aria-label="Telegram" class="hover:text-blue-400 transition-colors duration-300">
+          <Icon name="mdi:telegram" class="w-8 h-8" />
+        </a>
+      </div>
+
+      <div class="flex justify-center gap-6 text-xs uppercase tracking-widest mt-4 border-t border-stone-800 pt-8">
+        <a href="/de/impressum" class="hover:text-white transition">Impressum</a>
+        <a href="/de/datenschutz" class="hover:text-white transition">Datenschutz</a>
       </div>
     </footer>
 

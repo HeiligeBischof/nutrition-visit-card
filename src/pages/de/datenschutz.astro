@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro'; // Убедись, что путь к твоему Layout верный
+---
+
+<Layout title="Datenschutzerklärung | Nutritionist Visit Card" lang="de">
+  <main class="bg-stone-50 py-20 px-6">
+    <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 shadow-sm border border-stone-100 rounded-2xl">
+      <h1 class="text-3xl font-bold text-stone-900 mb-8 text-center uppercase tracking-tight">Datenschutzerklärung</h1>
+      
+      <div class="prose prose-stone prose-sm max-w-none text-stone-700 leading-relaxed space-y-6">
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-b pb-2">1. Datenschutz auf einen Blick</h2>
+          <p>
+            Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, 
+            wenn Sie diese Website besuchen...
+          </p>
+        </section>
+
+        </div>
+
+      <div class="mt-12 pt-8 border-t border-stone-100 text-center">
+        <a href="/de" class="text-green-600 font-bold hover:text-green-700 transition">← Zurück zur Startseite</a>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  /* Стили для того, чтобы вставленный из генератора текст выглядел профессионально */
+  .prose h2 { @apply text-xl font-bold text-stone-900 mt-8 mb-4; }
+  .prose p { @apply mb-4; }
+  .prose strong { @apply text-stone-900 font-semibold; }
+</style>
