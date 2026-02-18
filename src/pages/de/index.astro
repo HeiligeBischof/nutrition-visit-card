@@ -16,23 +16,59 @@ const currentLang = "de";
   
   <body class="bg-stone-50 text-stone-800 font-sans">
     
-    <nav class="flex justify-between items-center p-6 max-w-6xl mx-auto">
-      <div class="text-xl font-bold text-green-700 tracking-wider">ERNÄHRUNGSBERATER</div>
-      <div class="space-x-6 hidden md:block">
-        <a href="#about" class="hover:text-green-600 transition">Über mich</a>
-        <a href="#services" class="hover:text-green-600 transition">Dienstleistungen</a>
-        <a href="#contact" class="hover:text-green-600 transition">Kontakt</a>
+ <nav class="sticky top-0 w-full bg-white border-b border-stone-100 z-50 shadow-sm">
+      <div class="flex justify-between items-center p-4 md:p-6 max-w-6xl mx-auto">
+        <div class="text-xl font-bold text-green-700 tracking-wider flex-shrink-0 uppercase">
+          Ernährungsberater
+        </div>
+        
+        <div class="hidden lg:flex items-center gap-8">
+          <div class="flex space-x-8"> 
+            <a href="#about" class="text-stone-600 hover:text-green-600 transition font-medium">Über mich</a>
+            <a href="#services" class="text-stone-600 hover:text-green-600 transition font-medium">Dienstleistungen</a>
+            <a href="#contact" class="text-stone-600 hover:text-green-600 transition font-medium">Kontakt</a>
+          </div>
+          
+          <div class="h-6 w-px bg-stone-200"></div> <LanguagePicker lang={currentLang} />
+          
+          <a 
+            href="https://calendar.app.google/x3Z3qypnZNeta4RWA" 
+            target="_blank"
+            class="bg-green-600 text-white px-6 py-2.5 rounded-full hover:bg-green-700 transition shadow-md flex items-center gap-2 font-medium"
+          >
+            <Icon name="mdi:calendar-check" class="w-5 h-5" />
+            <span>Termin buchen</span>
+          </a>
+        </div>
+
+        <button id="menu-toggle" class="lg:hidden text-stone-800 p-1 focus:outline-none" aria-label="Menu">
+          <Icon name="mdi:menu" class="w-9 h-9" />
+        </button>
       </div>
-      <LanguagePicker lang={currentLang} />
-     <a 
-  href="https://calendar.app.google/x3Z3qypnZNeta4RWA" 
-  target="_blank"
-  rel="noopener noreferrer"
-  class="bg-green-600 text-white px-6 py-2.5 rounded-full hover:bg-green-700 transition-all duration-300 shadow-md hover:shadow-xl flex items-center gap-2 font-medium"
->
-  <Icon name="mdi:calendar-check" class="w-5 h-5" />
-  <span>Termin buchen</span>
-</a>
+
+      <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-b border-stone-100 shadow-2xl">
+        <div class="flex flex-col p-6 space-y-6">
+          <div class="flex flex-col space-y-4">
+            <a href="#about" class="text-xl font-medium text-stone-800 py-2 border-b border-stone-50">Über mich</a>
+            <a href="#services" class="text-xl font-medium text-stone-800 py-2 border-b border-stone-50">Dienstleistungen</a>
+            <a href="#contact" class="text-xl font-medium text-stone-800 py-2 border-b border-stone-50">Kontakt</a>
+          </div>
+          
+          <div class="py-2">
+            <p class="text-xs uppercase tracking-widest text-stone-400 mb-3">Sprache auswählen:</p>
+            <LanguagePicker lang={currentLang} />
+          </div>
+
+          <a 
+            href="https://calendar.app.google/x3Z3qypnZNeta4RWA" 
+            target="_blank"
+            class="bg-green-600 text-white w-full py-4 rounded-xl text-center font-bold text-lg shadow-lg flex justify-center items-center gap-3"
+          >
+            <Icon name="mdi:calendar-check" class="w-6 h-6" />
+            Termin buchen
+          </a>
+        </div>
+      </div>
     </nav>
 
     <header class="max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col-reverse md:flex-row items-center gap-12">
@@ -183,3 +219,21 @@ const currentLang = "de";
 
   </body>
 </html>
+
+<script>
+  const btn = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const links = document.querySelectorAll('#mobile-menu a');
+
+  // Переключение меню
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+
+  // Закрытие меню при клике на любую ссылку (чтобы плавно скроллило к секции)
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      menu?.classList.add('hidden');
+    });
+  });
+</script>
