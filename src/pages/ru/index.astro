@@ -26,9 +26,15 @@ const currentLang = "ru"; // <-- Укажи язык этого файла ("ru"
         <a href="#contact" class="hover:text-green-600 transition">Контакты</a>
       </div>
       <LanguagePicker lang={currentLang} />
-      <a href="#contact" class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition shadow-lg">
-        Записаться
-      </a>
+      <a 
+  href="https://calendar.app.google/x3Z3qypnZNeta4RWA" 
+  target="_blank"
+  rel="noopener noreferrer"
+  class="bg-green-600 text-white px-6 py-2.5 rounded-full hover:bg-green-700 transition-all duration-300 shadow-md hover:shadow-xl flex items-center gap-2 font-medium"
+>
+  <Icon name="mdi:calendar-check" class="w-5 h-5" />
+  <span>Записаться</span>
+</a>
     </nav>
 
     <header class="max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col-reverse md:flex-row items-center gap-12">
