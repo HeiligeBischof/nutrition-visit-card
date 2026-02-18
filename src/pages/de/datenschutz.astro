@@ -1,33 +1,96 @@
 ---
-import Layout from '../../layouts/Layout.astro'; // Убедись, что путь к твоему Layout верный
+import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="Datenschutzerklärung | Nutritionist Visit Card" lang="de">
   <main class="bg-stone-50 py-20 px-6">
-    <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 shadow-sm border border-stone-100 rounded-2xl">
-      <h1 class="text-3xl font-bold text-stone-900 mb-8 text-center uppercase tracking-tight">Datenschutzerklärung</h1>
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-16 shadow-sm border border-stone-100 rounded-2xl">
+      <h1 class="text-3xl font-bold text-stone-900 mb-10 text-center uppercase tracking-tight border-b pb-6">Datenschutzerklärung</h1>
       
-      <div class="prose prose-stone prose-sm max-w-none text-stone-700 leading-relaxed space-y-6">
+      <div class="prose prose-stone prose-sm max-w-none text-stone-700 leading-relaxed space-y-10">
+        
         <section>
-          <h2 class="text-xl font-bold text-stone-900 mb-4 border-b pb-2">1. Datenschutz auf einen Blick</h2>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Einleitung und Überblick</h2>
+          <p>Wir haben diese Datenschutzerklärung (Fassung 18.02.2026-113106249) verfasst, um Ihnen gemäß der Vorgaben der Datenschutz-Grundverordnung (EU) 2016/679 и anwendbaren nationalen Gesetzen zu erklären, welche personenbezogenen Daten wir verarbeiten[cite: 965, 966].</p>
+          <p><strong>Kurz gesagt:</strong> Wir informieren Sie umfassend über Daten, die wir über Sie verarbeiten[cite: 967].</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Anwendungsbereich</h2>
+          <p>Diese Datenschutzerklärung gilt für alle von uns im Unternehmen verarbeiteten personenbezogenen Daten, einschließlich Onlineauftritte, Social Media и мобильные приложения[cite: 974, 978].</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Rechtsgrundlagen</h2>
+          <p>Wir verarbeiten Ihre Daten nur bei Vorliegen einer Einwilligung, zur Vertragserfüllung, aufgrund rechtlicher Verpflichtungen oder berechtigter Interessen (Art. 6 DSGVO)[cite: 979, 981, 984, 985].</p>
+        </section>
+
+        <section class="bg-stone-50 p-6 rounded-xl border border-stone-200">
+          <h2 class="text-xl font-bold text-stone-900 mb-4">Kontaktdaten des Verantwortlichen</h2>
           <p>
-            Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, 
-            wenn Sie diese Website besuchen...
+            <strong>Venera Gagarina</strong><br />
+            Arnold-Schönberg-Straße 3, 9020 Klagenfurt, Österreich <br />
+            E-Mail: <a href="mailto:gagarinavenera321@gmail.com" class="text-green-700 underline">gagarinavenera321@gmail.com</a> <br />
+            Telefon: <a href="tel:+4368120868522" class="text-green-700 underline">+43 681 208 68522</a> 
           </p>
         </section>
 
-        </div>
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Ihre Rechte</h2>
+          <p>Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf и Widerspruch zu[cite: 991, 994, 995].</p>
+          <p class="mt-4"><strong>Zuständige Aufsichtsbehörde:</strong><br />
+            Österreichische Datenschutzbehörde, Barichgasse 40-42, 1030 Wien[cite: 1005, 1006].
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Webhosting</h2>
+          <p>Wir nutzen Vercel für das Hosting unserer Website. Dabei werden automatisch Logfiles (IP-Adresse, Browser, Zeitpunkt) verarbeitet[cite: 1101, 1117].</p>
+          <p><strong>Anbieter:</strong> Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Cloudflare</h2>
+          <p>Zur Optimierung и Absicherung nutzen wir Cloudflare (CDN). Daten wie IP-Adressen и Sicherheitsfingerabdrücke werden verarbeitet[cite: 1409, 1410].</p>
+          <p><strong>Anbieter:</strong> Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Cloud-Dienste</h2>
+          <p>Wir nutzen Google Cloud (einschließlich Google Calendar и Meet) zur Terminverwaltung и Durchführung von Beratungen[cite: 1537, 1642].</p>
+          <p><strong>Anbieter:</strong> Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland[cite: 1538, 1586].</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Messenger & Social Media</h2>
+          <p>Wir kommunizieren über WhatsApp, Telegram и Instagram. Bitte beachten Sie die jeweiligen Datenschutzrichtlinien этих провайдеров[cite: 1162, 1194, 1307].</p>
+          <ul class="list-disc ml-6 space-y-2">
+            <li><strong>WhatsApp:</strong> WhatsApp Ireland Limited[cite: 1198].</li>
+            <li><strong>Telegram:</strong> Telegram Messenger LLP[cite: 1165].</li>
+            <li><strong>Instagram:</strong> Meta Platforms Ireland Limited[cite: 1311, 1312].</li>
+          </ul>
+        </section>
+
+        <section class="text-xs text-stone-500 border-t pt-8">
+          <h2 class="text-lg font-bold text-stone-800 mb-4">Erklärung verwendeter Begriffe</h2>
+          <p>Hier finden Sie Definitionen zu Begriffen wie "Personenbezogene Daten", "Verarbeitung" и "Verantwortlicher" gemäß Art. 4 DSGVO[cite: 1776, 1796, 1807, 1810].</p>
+        </section>
+
+      </div>
 
       <div class="mt-12 pt-8 border-t border-stone-100 text-center">
-        <a href="/de" class="text-green-600 font-bold hover:text-green-700 transition">← Zurück zur Startseite</a>
+        <a href="/de" class="inline-flex items-center gap-2 text-green-600 font-bold hover:text-green-700 transition">
+          <span>←</span> Zurück zur Startseite
+        </a>
       </div>
     </div>
   </main>
 </Layout>
 
 <style is:global>
-  /* Стили для того, чтобы вставленный из генератора текст выглядел профессионально */
-  .prose h2 { @apply text-xl font-bold text-stone-900 mt-8 mb-4; }
+  .prose h2 { @apply text-xl font-bold text-stone-900 mt-10 mb-4; }
   .prose p { @apply mb-4; }
   .prose strong { @apply text-stone-900 font-semibold; }
+  .prose ul { @apply list-disc ml-6 mb-4; }
+  .prose a { @apply text-green-700 underline hover:text-green-900; }
 </style>

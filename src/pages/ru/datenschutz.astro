@@ -1,65 +1,96 @@
 ---
-// src/pages/en/datenschutz.astro
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Privacy Policy | Nutritionist Visit Card" lang="ru">
+<Layout title="Privacy Policy | Nutritionist Visit Card" lang="en">
   <main class="bg-stone-50 py-20 px-6">
-    <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 shadow-sm border border-stone-100 rounded-2xl">
-      <h1 class="text-3xl font-bold text-stone-900 mb-2 text-center uppercase tracking-tight">Privacy Policy</h1>
-      <p class="text-center text-stone-400 text-xs mb-8 uppercase tracking-widest">(Datenschutzerklärung)</p>
-
-      <div class="prose prose-stone prose-sm max-w-none text-stone-700 leading-relaxed space-y-8">
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-16 shadow-sm border border-stone-100 rounded-2xl">
+      <h1 class="text-3xl font-bold text-stone-900 mb-10 text-center uppercase tracking-tight border-b pb-6">Privacy Policy</h1>
+      
+      <div class="prose prose-stone prose-sm max-w-none text-stone-700 leading-relaxed space-y-10">
         
-        <div class="bg-amber-50 border-l-4 border-amber-200 p-4 text-amber-800 text-xs italic">
-          Disclaimer: This is a translation of the legally binding German "Datenschutzerklärung". In case of any discrepancies, the German version shall prevail.
-        </div>
-
         <section>
-          <h2 class="text-xl font-bold text-stone-900 mb-4 border-b pb-2">1. An Overview of Data Protection</h2>
-          <h3 class="font-bold mb-2 text-stone-800">General Information</h3>
-          <p>The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to identify you personally.</p>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Introduction and Overview</h2>
+          <p>We have drafted this privacy policy (version 18.02.2026) to explain, in accordance with the requirements of the General Data Protection Regulation (EU) 2016/679 and applicable national laws, which personal data we process.</p>
+          <p><strong>In short:</strong> We provide you with comprehensive information about the data we process about you.</p>
         </section>
 
         <section>
-          <h2 class="text-xl font-bold text-stone-900 mb-4 border-b pb-2">2. Hosting and Server Log Files</h2>
-          <p>Our website is hosted on external servers (Vercel). When you visit our site, the server automatically collects and stores information in so-called server log files, which your browser automatically transmits to us:</p>
-          <ul class="list-disc ml-5 space-y-1">
-            <li>Browser type and browser version</li>
-            <li>Operating system used</li>
-            <li>Referrer URL</li>
-            <li>Host name of the accessing computer</li>
-            <li>Time of the server request</li>
-            <li>IP address</li>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Scope</h2>
+          <p>This privacy policy applies to all personal data processed by our company, including online presence, social media, and mobile applications.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Legal Basis</h2>
+          <p>We process your data only if there is consent, for the fulfillment of a contract, due to legal obligations, or legitimate interests (Art. 6 GDPR).</p>
+        </section>
+
+        <section class="bg-stone-50 p-6 rounded-xl border border-stone-200">
+          <h2 class="text-xl font-bold text-stone-900 mb-4">Contact Details of the Controller</h2>
+          <p>
+            <strong>Venera Gagarina</strong> <br />
+            Arnold-Schönberg-Straße 3, 9020 Klagenfurt, Austria <br />
+            Email: <a href="mailto:gagarinavenera321@gmail.com" class="text-green-700 underline">gagarinavenera321@gmail.com</a> <br />
+            Phone: <a href="tel:+4368120868522" class="text-green-700 underline">+43 681 208 68522</a> [cite: 42, 83]
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Your Rights</h2>
+          <p>Under the GDPR, you generally have the right to access, rectification, erasure, restriction of processing, data portability, withdrawal, and objection.</p>
+          <p class="mt-4"><strong>Competent Supervisory Authority:</strong><br />
+            Austrian Data Protection Authority (DSB), Barichgasse 40-42, 1030 Vienna[cite: 45, 100].
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Webhosting</h2>
+          <p>We use Vercel for hosting our website. In this process, log files (IP address, browser, time of visit) are automatically processed[cite: 52, 215].</p>
+          <p><strong>Provider:</strong> Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA[cite: 52, 215].</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Cloudflare</h2>
+          <p>For optimization and security, we use Cloudflare (CDN). Data such as IP addresses and security fingerprints are processed[cite: 508].</p>
+          <p><strong>Provider:</strong> Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA[cite: 508].</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Cloud Services</h2>
+          <p>We use Google Cloud services (including Google Calendar and Meet) for appointment scheduling and conducting consultations[cite: 632, 790, 835].</p>
+          <p><strong>Provider:</strong> Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland[cite: 633, 681].</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-stone-900 mb-4 border-l-4 border-green-600 pl-4">Messenger & Social Media</h2>
+          <p>We communicate via WhatsApp, Telegram, and Instagram. Please note the respective privacy policies of these providers[cite: 223, 260, 292, 406].</p>
+          <ul class="list-disc ml-6 space-y-2">
+            <li><strong>WhatsApp:</strong> WhatsApp Ireland Limited[cite: 292, 293].</li>
+            <li><strong>Telegram:</strong> Telegram Messenger LLP[cite: 257, 260].</li>
+            <li><strong>Instagram:</strong> Meta Platforms Ireland Limited[cite: 406, 465].</li>
           </ul>
-          <p class="mt-2 text-xs italic">The basis for data processing is Art. 6 para. 1 lit. f GDPR, which permits the processing of data to fulfill a contract or for measures prior to a contract.</p>
         </section>
 
-        <section>
-          <h2 class="text-xl font-bold text-stone-900 mb-4 border-b pb-2">3. Social Media & Communication</h2>
-          <h3 class="font-bold mb-1 text-stone-800 text-base">LinkedIn</h3>
-          <p>Our website uses functions of the LinkedIn network. If you click on a LinkedIn link, a connection to LinkedIn's servers is established. LinkedIn will be informed that you have visited our website with your IP address.</p>
-          
-          <h3 class="font-bold mt-4 mb-1 text-stone-800 text-base">WhatsApp</h3>
-          <p>For fast communication, we use WhatsApp. The provider is WhatsApp Ireland Limited. Communication is end-to-end encrypted, however, WhatsApp may collect metadata (time, sender, recipient).</p>
-        </section>
-
-        <section>
-          <h2 class="text-xl font-bold text-stone-900 mb-4 border-b pb-2">4. Plugins and Tools</h2>
-          <h3 class="font-bold mb-1 text-stone-800 text-base">Google Web Fonts</h3>
-          <p>This site uses web fonts provided by Google for the uniform display of fonts. When you call up a page, your browser loads the required web fonts into your browser cache to display texts and fonts correctly. For this purpose, the browser you use must connect to Google's servers, which means Google becomes aware that our website was accessed via your IP address.</p>
-        </section>
-
-        <section>
-          <h2 class="text-xl font-bold text-stone-900 mb-4 border-b pb-2">5. Your Rights as a Data Subject</h2>
-          <p>You have the right at any time to receive information free of charge about the origin, recipient, and purpose of your stored personal data. You also have a right to request the correction or deletion of this data. If you have given your consent to data processing, you can revoke this consent at any time for the future.</p>
+        <section class="text-xs text-stone-500 border-t pt-8">
+          <h2 class="text-lg font-bold text-stone-800 mb-4">Explanation of Terms</h2>
+          <p>Here you can find definitions for terms such as "Personal Data", "Processing", and "Controller" according to Art. 4 GDPR [cite: 871-905].</p>
         </section>
 
       </div>
 
       <div class="mt-12 pt-8 border-t border-stone-100 text-center">
-        <a href="/ru" class="text-green-600 font-bold hover:text-green-700 transition">← Back to Homepage</a>
+        <a href="/ru" class="inline-flex items-center gap-2 text-green-600 font-bold hover:text-green-700 transition">
+          <span>←</span> Back to Home
+        </a>
       </div>
     </div>
   </main>
 </Layout>
+
+<style is:global>
+  .prose h2 { @apply text-xl font-bold text-stone-900 mt-10 mb-4; }
+  .prose p { @apply mb-4; }
+  .prose strong { @apply text-stone-900 font-semibold; }
+  .prose ul { @apply list-disc ml-6 mb-4; }
+  .prose a { @apply text-green-700 underline hover:text-green-900; }
+</style>
